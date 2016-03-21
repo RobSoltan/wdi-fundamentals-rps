@@ -21,18 +21,26 @@ function randomPlay() {
 /*           Write Your Code Below            */
 ////////////////////////////////////////////////
 
-function getPlayerMove(move) {
+function getInput() {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    return /* Your Expression */;
+    console.log("Choose rock, paper or scissors")
+	return prompt();
 }
 
-function getComputerMove(move) {
+function randomPlay() {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return /* Your Expression */;
+    var randomNumber = Math.random();
+	if (randomNumber <0.33) {
+		return "rock";
+	} else if (randomNumber <0.66) {
+		return "paper";
+	} else {
+		return "scissors";
+	}
 }
 
 function getWinner(playerMove,computerMove) {
