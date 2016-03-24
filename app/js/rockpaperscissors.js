@@ -60,7 +60,9 @@ function getWinner(playerMove,computerMove) {
     else if(playerMove == "scissors" && computerMove == "paper") {
         winner = "player";
     }
-    return winner;
+    else if(playerMove == "scissors" && computerMove == "rock") {
+        winner = "computer";
+    } return winner;
 }
 
 function playToFive() {
@@ -78,7 +80,7 @@ function playToFive() {
                 playerWins += 1;
                 console.log("The score is Player: " + playerWins + " to " + computerWins + " :Computer");
                 if (playerWins == 5) {
-                    console.log("Congratulations! You win!");
+                    console.log("Awesome-sauce!! You win!");
                     break;
                 }
             }
@@ -86,7 +88,7 @@ function playToFive() {
                 computerWins += 1;
                 console.log("The score is Player: " + playerWins + " to " + computerWins + " :Computer");
                 if (computerWins == 5) {
-                    console.log("Oh No! The computer won!");
+                    console.log("Game over. Computer wins!");
                     break;
                 }
             
