@@ -74,11 +74,11 @@ function playToFive() {
             var playerTurnMove = getPlayerMove();
             var computerTurnMove = getComputerMove();
             var winnerRound = getWinner(playerTurnMove, computerTurnMove);      
-            console.log("Player's move is " + playerTurnMove + " Computer's move is " + computerTurnMove);
+            console.log("Player chooses " + playerTurnMove + ". Computer chooses " + computerTurnMove + ".");
             console.log("The winner this round is " + winnerRound);
             if (winnerRound == 'player') {
                 playerWins += 1;
-                console.log("The score is Player: " + playerWins + " to " + computerWins + " :Computer");
+                console.log("Player: " + playerWins + ", Computer: " + computerWins);
                 if (playerWins == 5) {
                     console.log("Awesome-sauce!! You win!");
                     break;
@@ -86,7 +86,7 @@ function playToFive() {
             }
             else if (winnerRound == 'computer') {
                 computerWins += 1;
-                console.log("The score is Player: " + playerWins + " to " + computerWins + " :Computer");
+                console.log("Player: " + playerWins + ", Computer: " + computerWins);
                 if (computerWins == 5) {
                     console.log("Game over. Computer wins!");
                     break;
@@ -94,7 +94,7 @@ function playToFive() {
             
             }
             else if (winnerRound == 'tie' ){
-                console.log("The score is Player: " + playerWins + " to " + computerWins + " :Computer");
+                console.log("Player: " + playerWins + ", Computer: " + computerWins);
             }
         }
         
